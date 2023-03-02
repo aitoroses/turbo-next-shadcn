@@ -4,7 +4,7 @@
   "private": true,
   "workspaces": [
     "packages/*",
-    "packages/bounded-context-sample/infrastructure/ui/*"
+    "packages/bounded-context-sample/infrastructure/ui/next"
   ],
   "scripts": {
     "build": "turbo run build",
