@@ -1,4 +1,4 @@
-import Form from 'mirror-campaigns/infrastructure/ui/Form'
+import Form from "@app/components/Form";
 
 export default function Page() {
   return (

@@ -21,6 +21,12 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@app/*": [
+        "./app/*"
+      ],
+      "@/*": [
+        "../../../*"
+      ],
       "@/styles/*": [
         "styles/*"
       ]

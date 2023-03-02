@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "packages/*",
+    "packages/bounded-context-sample/infrastructure/ui/*"
   ],
   "scripts": {
     "build": "turbo run build",

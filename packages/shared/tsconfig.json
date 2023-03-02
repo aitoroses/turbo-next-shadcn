@@ -1,5 +1,5 @@
 {
   "extends": "tsconfig/react-library.json",
-  "include": [".", "../mirror-campaigns/infrastructure/ui/BudgetInput.tsx"],
+  "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }
