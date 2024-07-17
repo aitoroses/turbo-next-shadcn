@@ -1,10 +1,10 @@
 {
-  "name": "turborepo-example",
-  "version": "0.0.0",
+  "name": "turbo-next-shadcn",
+  "version": "1.0.0",
   "private": true,
   "workspaces": [
-    "packages/*",
-    "packages/bounded-context-sample/infrastructure/ui/next"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
     "build": "turbo run build",
@@ -14,12 +14,13 @@
   },
   "devDependencies": {
     "eslint-config-custom": "*",
-    "prettier": "latest",
-    "turbo": "latest"
+    "prettier": "^3.2.5",
+    "turbo": "^2.0.7",
+    "typescript": "^5.4.5"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18"
   },
   "dependencies": {},
-  "packageManager": "yarn@1.22.11"
+  "packageManager": "bun@1.1.20"
 }

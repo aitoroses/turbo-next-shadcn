@@ -1,73 +1,99 @@
-# Turborepo starter
+# Turbo Next Shadcn
 
-This is an official Yarn v1 starter turborepo.
+Welcome to the Turbo Next Shadcn project! This repository is a monorepo setup using Turbo, Next.js, and Shadcn UI components. It aims to provide a scalable and maintainable architecture for modern web applications.
 
-## What's inside?
+## Table of Contents
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. It includes the following packages/apps:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-### Apps and Packages
+## Installation
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+To get started with this project, follow these steps:
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/turbo-next-shadcn.git
+   cd turbo-next-shadcn
+   ```
 
-### Utilities
+2. **Install dependencies:**
+   We use `bun` as our package manager.
+   ```sh
+   bun install
+   ```
 
-This turborepo has some additional tools already setup for you:
+3. **Set up environment variables:**
+   Create a `.env` file in the root directory and add your environment variables.
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## Usage
+
+### Development
+
+To start the development server, run:
+```sh
+bun run dev
+```
+
+This will start the Next.js development server with Turbo.
 
 ### Build
 
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run build
+To build the project for production, run:
+```sh
+bun run build
 ```
 
-### Develop
+### Lint
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run dev
+To lint the project, run:
+```sh
+bun run lint
 ```
 
-### Remote Caching
+## Project Structure
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+Here's an overview of the project's structure:
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+- **apps/web**: The main web application.
+  - `package.json`: Contains scripts and dependencies for the web app.
+  - `tailwind.config.ts`: Tailwind CSS configuration.
+  - `tsconfig.json`: TypeScript configuration for the web app.
 
-```
-cd my-turborepo
-npx turbo login
-```
+- **packages/eslint-config**: Custom ESLint configuration.
+  - `package.json`: Contains scripts and dependencies for ESLint.
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+- **packages/typescript-config**: Shared TypeScript configurations.
+  - `base.json`: Base TypeScript configuration.
+  - `nextjs.json`: TypeScript configuration for Next.js projects.
+  - `react-library.json`: TypeScript configuration for React libraries.
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
+- **packages/ui**: Shared UI components and utilities.
+  - `package.json`: Contains scripts and dependencies for the UI package.
+  - `src/lib/utils.ts`: Utility functions.
+  - `tailwind.config.ts`: Tailwind CSS configuration for the UI package.
 
-```
-npx turbo link
-```
+- **turbo.json**: Turbo configuration file.
 
-## Useful Links
+## Contributing
 
-Learn more about the power of Turborepo:
+We welcome contributions! Please follow these steps to contribute:
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/your-feature`).
+6. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+Special thanks to the contributors and the open-source community for their invaluable support and contributions.
