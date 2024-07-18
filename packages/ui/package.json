@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "ui:add": "pnpm dlx shadcn-ui@latest add",
+    "ui:add": "bunx shadcn-ui@latest add",
     "lint": "eslint ."
   },
   "peerDependencies": {
@@ -21,7 +21,9 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-progress": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.395.0",
@@ -33,9 +35,13 @@
     "./postcss.config": "./postcss.config.mjs",
     "./tailwind.config": "./tailwind.config.ts",
     "./lib/*": "./src/lib/*.ts",
-    "./components/*": [
-      "./src/components/*.tsx",
-      "./src/components/*.ts"
+    "./components/ui/*": [
+      "./src/components/ui/*.tsx",
+      "./src/components/ui/*.ts"
+    ],
+    "./components/icons/*": [
+      "./src/components/icons/*.tsx",
+      "./src/components/icons/*.ts"
     ]
   }
 }
